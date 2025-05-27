@@ -40,7 +40,7 @@ class _BatteryMonitorScreenState extends State<BatteryMonitorScreen> {
   }
 
   void _startMonitoring() {
-    _timer = Timer.periodic(const Duration(seconds: 50), (timer) async {
+    _timer = Timer.periodic(const Duration(seconds: 3), (timer) async {
       final level = await _battery.batteryLevel;
       setState(() => _batteryLevel = level);
 
